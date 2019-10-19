@@ -1,0 +1,1 @@
+//validacoes vao ficar aqui, vertical, horizontal e diagonal

@@ -1,0 +1,1 @@
+//tratativas relacionadas ao click e vez de quem e etc.
