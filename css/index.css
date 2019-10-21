@@ -1,1 +1,47 @@
-/*css da página index*/
+body *{
+    padding: 0;
+    list-style: none;
+    border-spacing: 0;
+   /*  box-sizing: border-box; */
+}
+.game{
+    margin: auto;
+    width: 40%;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bloco{
+    width: calc(100%/4);
+    border: 5px solid black;
+}
+.bloco:nth-child(1){
+    border-left: none;
+    border-top: none;
+}
+.bloco:nth-child(2){
+    border-top: none;
+}
+.bloco:nth-child(3){
+    border-right: none;
+    border-top: none;
+}
+.bloco:nth-child(4){
+    border-left: none;
+}
+.bloco:nth-child(6){
+    border-right: none;
+}
+.bloco:nth-child(7){
+    border-left: none;
+    border-bottom: none;
+}
+.bloco:nth-child(8){
+    border-bottom: none;
+}
+.bloco:nth-child(9){
+    border-right: none;
+    border-bottom: none;
+}
+
+
