@@ -14,6 +14,11 @@ body *{
 .bloco{
     width: calc(100%/4);
     border: 5px solid black;
+    height: 190px;
+    font-size: 150px;
+    font-family: arial;
+    font-weight: bolder;
+    text-align: center;
 }
 .bloco:nth-child(1){
     border-left: none;
