@@ -1,23 +1,30 @@
 blocos = document.getElementsByClassName("bloco");
+winner = document.querySelectorAll(".winner")[0];
 vez = true;
 for(var i=0;i<blocos.length;i++){
     blocos[i].onclick = function(click){
         if(vez == true && click.target.innerHTML == ""){
             click.target.innerHTML = "X";
             if(validarJogador()){
-                //alert("Jogador X Venceu, Parabéns, Reiniciando...");
+                setTimeout(() => {
+                    winner.innerHTML = "O jogador X venceu, parabéns, reiniciando...";
+                    winner.style.display = "flex";
+                }, 1000);
                 setTimeout(() => {
                     window.location.reload();  
-                }, 2000);
+                }, 3000);
             }
             vez = false;
         }else if(vez == false && click.target.innerHTML == ""){
             click.target.innerHTML = "O";
             if(validarJogador()){
                 setTimeout(() => {
-                    //alert("Jogador O Venceu, Parabéns, Reiniciando...");
+                    winner.innerHTML = "O jogador O venceu, parabéns, reiniciando...";
+                    winner.style.display = "flex";
+                }, 1000);
+                setTimeout(() => {
                     window.location.reload();  
-                }, 2000);
+                }, 3000);
             }
             vez = true;
         }
