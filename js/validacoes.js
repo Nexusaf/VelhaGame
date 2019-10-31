@@ -1,5 +1,6 @@
 blocos = document.getElementsByClassName("bloco");
-winner = document.querySelectorAll(".winner")[0];
+winnerContainer = document.querySelectorAll(".winner")[0];
+winnerContent = winnerContainer.querySelector("p");
 vez = true;
 
 for(var i=0;i<blocos.length;i++){
@@ -9,8 +10,8 @@ for(var i=0;i<blocos.length;i++){
 
             if (verifica(blocos, "X")) {
                 setTimeout(() => {
-                    winner.innerHTML = "O jogador X venceu, parabéns, reiniciando...";
-                    winner.style.display = "flex";
+                    winnerContent.innerHTML = "O jogador X venceu, parabéns, reiniciando...";
+                    winnerContainer.style.display = "flex";
                 }, 1000);
                 setTimeout(() => {
                     window.location.reload();  
@@ -23,8 +24,8 @@ for(var i=0;i<blocos.length;i++){
 
             if (verifica(blocos, "O")) {
                 setTimeout(() => {
-                    winner.innerHTML = "O jogador O venceu, parabéns, reiniciando...";
-                    winner.style.display = "flex";
+                    winnerContent.innerHTML = "O jogador O venceu, parabéns, reiniciando...";
+                    winnerContainer.style.display = "flex";
                 }, 1000);
 
                 setTimeout(() => {

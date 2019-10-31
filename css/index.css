@@ -1,28 +1,57 @@
-body *{
+:root {
+    --body-bg-color: #8ED9C0;
+    --board-width: 500px;
+    --board-height: var(--board-width);
+    --board-limit-color: rgb(20, 53, 54);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
     padding: 0;
-    list-style: none;
-    border-spacing: 0;
-   /*  box-sizing: border-box; */
-}
-body{
     margin: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--body-bg-color);
 }
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
 .game{
     margin: auto;
-    width: 40%;
-    height: 90vh;
+    width: var(--board-width);
+    height: var(--board-height);
     display: flex;
     flex-wrap: wrap;
 }
+
 .bloco{
-    width: calc(100%/4);
-    border: 5px solid black;
-    height: 190px;
-    font-size: 150px;
+    width: calc(100%/3);
+    height: calc(100%/3);
+    border: 5px solid var(--board-limit-color);
+    color: rgb(65, 65, 65);
+    font-size: 8em;
     font-family: arial;
     font-weight: bolder;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .bloco:nth-child(1){
     border-left: none;
     border-top: none;
@@ -51,16 +80,25 @@ body{
     border-right: none;
     border-bottom: none;
 }
+
 .winner{
     position: fixed;
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgb(19, 19, 19);
-    font-size: 5em;
-    color: white;
+    background-color: rgba(6, 70, 50, 0.876);
     text-shadow: 6px 3px 10px rgb(66, 66, 66);
-    text-align: center;
-    align-content: center;
+    justify-content: center;
     align-items: center;
+}
+
+.winner p {
+    font-family: sans-serif;
+    border-radius: 5px;
+    background-color: rgb(8, 144, 168);
+    width: 60vw;
+    padding: 20px;
+    font-size: 3em;
+    color: white;
+    text-align: center;
 }
